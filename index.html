@@ -6,32 +6,36 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="bell-modern.css">
   <link rel="stylesheet" href="utility.css">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Meet landing page</title>
+  <title>Meet landing page</title>
 </head>
 <body>
   <div class="container">
     <div class="logo">
       <img src="assets/logo.svg" alt="logo">
     </div>
-    <div class="header flex">
-      <div class="header__image--a banner"></div>
-      <div class="header__image--b banner"></div>
+    <div class="header">
+      <div class="header__banner--a">
+        <div class="header__image--a banner"></div>
+        <div class="header__image--b banner"></div>
+      </div>
       <div class="header__content">
         <div class="header__title">Group Chat for Everyone</div>
         <div class="header__description">
           Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
         </div>
         <div class="header__cta">
-          <button>Download v1.3</button>
-          <button>What is it?</button>
+          <button class="button__primary">Download <span class="button__version-text">v1.3</span></button>
+          <button class="button__secondary">What is it?</button>
         </div>
       </div>
-      <div class="header__image--c banner"></div>
+      <div class="header__banner--a">
+        <div class="header__image--c banner"></div>
+      </div>
     </div>
     <div class="spacer">
       <img src="assets/spacer.svg">
@@ -64,7 +68,7 @@
         Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
       </div>
       <div class="footer__cta">
-        <button>Download v1.3</button>
+        <button class="button__secondary">Download <span class="button__version-text">v1.3</span></button>
       </div>
     </div>
   </div>

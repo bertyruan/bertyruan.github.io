@@ -1,5 +1,6 @@
 html, body, .container {
     height: 100%;
+    font-size: 16px;
 }
 
 .container {
@@ -8,21 +9,40 @@ html, body, .container {
     justify-content: space-between;
 }
 
-/* .spacer {
-    background-image: url(assets/spacer.svg);
-    background-repeat: no-repeat;
-} */
-
-.main__image-container {
-    height: 25vh;
+.logo img {
+    margin-inline: auto auto;
+    margin-block: 3rem 3rem;
 }
 
-.main__image-container > img {
-    aspect-ratio: 1;
+/***************  HEADER ************** */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    text-align: center;
+}
+
+.header__content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.header__banner--a,
+.header__banner--b {
+    width: 100%;
+}
+
+.header__banner--b {
+    
 }
 
 .banner {
     width: 100%;
+    aspect-ratio: 1 / 1;
     background-repeat: no-repeat;
 }
 
@@ -38,10 +58,6 @@ html, body, .container {
     background-image: url(assets/desktop/image-hero-right.png);
 }
 
-
-.footer {
-    background-image: url(assets/desktop/image-footer.jpg);
-}
 
 @media screen and (max-width: 768px) {
     .header__image--b {
@@ -66,4 +82,74 @@ html, body, .container {
     .footer {
         background-image: url(assets/mobile/image-footer.jpg);
     }
+}
+
+.header__title {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 600;
+    color: var(--header-font-color);
+}
+
+.header__cta {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/***************  BUTTON ************** */
+
+button.button__primary, button.button__secondary {
+    color: white;
+    font-size: 1rem;
+    border-radius: 2rem;
+    padding-block: .6rem;
+    font-weight: 600;
+    /* TODO: fix width */
+    min-width: 193px; 
+    height: 58px;
+    letter-spacing: 1.5px;
+}
+
+button.button__primary {
+    background: var(--primary-color);
+}
+
+button.button__secondary {
+    background: var(--secondary-color);
+}
+
+.button___version-text {
+    margin-left: .2rem;
+}
+
+button.button__primary > .version-text {
+    color: var(--primary-color-2);
+}
+
+button.button__secondary > .version-text {
+    color: var(--secondary-color-2);
+}
+
+/* .spacer {
+    background-image: url(assets/spacer.svg);
+    background-repeat: no-repeat;
+} */
+
+
+/***************  MAIN ***************/
+
+.main__image-container {
+    height: 25vh;
+}
+
+.main__image-container > img {
+    aspect-ratio: 1;
+}
+
+
+/***************  FOOTER ***************/
+
+.footer {
+    background-image: url(assets/desktop/image-footer.jpg);
 }
