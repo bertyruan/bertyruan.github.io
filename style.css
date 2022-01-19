@@ -13,11 +13,11 @@ html, body, .container {
     background-repeat: no-repeat;
 } */
 
-.main-image-container {
+.main__image-container {
     height: 25vh;
 }
 
-.main-image-container > img {
+.main__image-container > img {
     aspect-ratio: 1;
 }
 
@@ -26,15 +26,15 @@ html, body, .container {
     background-repeat: no-repeat;
 }
 
-.header-image-a {
+.header__image--a {
     background-image: url(assets/desktop/image-hero-left.png);
 }
 
-.header-image-b {
+.header__image--b {
     display: none;
 }
 
-.header-image-c {
+.header__image--c {
     background-image: url(assets/desktop/image-hero-right.png);
 }
 
@@ -44,11 +44,11 @@ html, body, .container {
 }
 
 @media screen and (max-width: 768px) {
-    .header-image-b {
+    .header__image--b {
         display: block;
         background-image: url(assets/desktop/image-hero-right.png);
     }
-    .header-image-c {
+    .header__image--c {
         display: none;
     }
     .footer {
@@ -57,10 +57,10 @@ html, body, .container {
 }
 
 @media screen and (max-width: 375px) {
-    .header-image-a {
+    .header__image--a {
         background-image: url(assets/mobile/image-footer.jpg);
     }
-    .header-image-b, .header-image-c {
+    .header__image--b, .header__image--c {
         display: none;
     }
     .footer {
