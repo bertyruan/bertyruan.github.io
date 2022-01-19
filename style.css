@@ -1,0 +1,69 @@
+html, body, .container {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .spacer {
+    background-image: url(assets/spacer.svg);
+    background-repeat: no-repeat;
+} */
+
+.main-image-container {
+    height: 25vh;
+}
+
+.main-image-container > img {
+    aspect-ratio: 1;
+}
+
+.banner {
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.header-image-a {
+    background-image: url(assets/desktop/image-hero-left.png);
+}
+
+.header-image-b {
+    display: none;
+}
+
+.header-image-c {
+    background-image: url(assets/desktop/image-hero-right.png);
+}
+
+
+.footer {
+    background-image: url(assets/desktop/image-footer.jpg);
+}
+
+@media screen and (max-width: 768px) {
+    .header-image-b {
+        display: block;
+        background-image: url(assets/desktop/image-hero-right.png);
+    }
+    .header-image-c {
+        display: none;
+    }
+    .footer {
+        background-image: url(assets/tablet/image-footer.jpg);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header-image-a {
+        background-image: url(assets/mobile/image-footer.jpg);
+    }
+    .header-image-b, .header-image-c {
+        display: none;
+    }
+    .footer {
+        background-image: url(assets/mobile/image-footer.jpg);
+    }
+}

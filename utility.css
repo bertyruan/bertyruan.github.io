@@ -1,5 +1,30 @@
-html {
-    font-family: 'Red Hat Display', sans-serif;
-    background-color: #FAFAFA;
+:root {
+    --primary-color: #4D96A9;
+    --primary-color-2: #8FE3F9;
+    --secondary-color: #855FB1;
+    --secondary-color-2: #D9B8FF;
+    --bg-color: #FAFAFA;
+    --header-font-color: #28283D;
+    --font-color: #87879D;
+    
+    --primary-font: 'Red Hat Display', sans-serif;
+
+    --mobile-screen: 375px;
+    --tablet-screen: 768px;
 }
 
+html {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 375px) {
+    .flex {
+        flex-direction: row;
+    }
+}
