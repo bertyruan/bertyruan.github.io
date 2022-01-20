@@ -185,7 +185,6 @@ button.button__secondary:hover {
 
 .footer {
     width: 100%;
-    height: 100%;
     position: relative;
     color: white;
     display: grid;
@@ -200,7 +199,7 @@ button.button__secondary:hover {
 
 .footer > img {
     background-size: contain;
-    width: 100%;
+    width: 100vw;
     background-repeat: no-repeat;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -216,8 +215,7 @@ button.button__secondary:hover {
     display: none;
 }
 
-
-.footer__container {
+.footer__content {
     z-index: 100;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -225,35 +223,58 @@ button.button__secondary:hover {
     height: 100%;
     display: flex;
     flex-direction: row;
-}
-
-.footer__flex-margin {
-    flex: 1 1 10%;
-}
-
-.footer__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer__content > * {
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .footer__title {
     font-size: 2.5rem;
-    line-height: 2.6rem;
+    line-height: 2.5rem;
     font-weight: 900;
 }
 
 /***************  RESPONSIVE DESIGN ***************/
+
+@media screen and (min-width: 769px) {
+    .footer__content {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        line-height: clamp(1rem, 1.5vw + 10px, 2rem);
+    }
+
+    .footer__title {
+        font-size: clamp(1.5rem, 3vw, 3.5rem);
+        line-height: clamp(1.5rem, 3vw, 3.5rem);
+        flex: 1 1 40%;
+    }
+
+    .footer__description {
+        flex: 1 1 30%;
+    }
+
+    .footer__cta {
+        flex: 1 1 30%;
+    }
+
+    .footer__cta > button {
+        font-size: 1rem;
+        line-height: 1rem;
+        width: clamp(193px, 14vw, 300px);
+        height: clamp(58px, 4vw, 100px);
+        border-radius: 4rem;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .header__image--b {
         display: block;
         background-image: url(assets/desktop/image-hero-right.png);
     }
+
     .header__image--c {
         display: none;
     }
@@ -265,20 +286,28 @@ button.button__secondary:hover {
     .footer__background--desktop {
         display: none;
     }
+
     .footer__background--tablet {
         display: block;
     }
+
     .footer__background--mobile {
         display: none;
     }
+
     .footer__content {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         text-align: center;
+        margin: unset;
+    }
+
+    .footer__description {
+        width: 60vw;
     }
 }
 
-@media screen and (max-width: 501px) {
+@media screen and (max-width: 375px) {
     .header__image--a {
         background-image: url(assets/mobile/image-footer.jpg);
     }
@@ -304,15 +333,36 @@ button.button__secondary:hover {
     .footer__background--desktop {
         display: none;
     }
+
     .footer__background--tablet {
         display: none;
     }
+
     .footer__background--mobile {
         display: block;
     }
+
     .footer__content {
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 3rem;
         text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .footer__title {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    .footer__description {
+        width: 60vw;
+    }
+
+    .footer__cta > button {
+        font-size: inherit;
+        width: 50vw;
+        height: 15vw;
+        border-radius: 4rem;
     }
 }
