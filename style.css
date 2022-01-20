@@ -136,12 +136,11 @@ button.button__secondary:hover {
     flex-direction: row;
     /* flex-wrap: wrap; */
     justify-content: center;
-    gap: 2rem;
-    height: 40vh;
-    
+    gap: clamp(1em, 3vw ,2em);    
 }
 
 .main__image-container > img {
+    width: 20vw; 
     border-radius: 1rem;
     object-fit: contain;
 }
@@ -273,13 +272,25 @@ button.button__secondary:hover {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 501px) {
     .header__image--a {
         background-image: url(assets/mobile/image-footer.jpg);
     }
     .header__image--b, .header__image--c {
         display: none;
     }
+
+    .main__image-container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .main__image-container > img {
+        width: 38vw;
+        margin-bottom: 7vw;
+    }
+
     .footer__background--desktop {
         display: none;
     }
