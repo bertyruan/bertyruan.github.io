@@ -59,8 +59,8 @@ html, body, .container {
 }
 
 .header__title {
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 4rem;
+    line-height: 4rem;
     font-weight: 600;
     color: var(--header-font-color);
 }
@@ -80,8 +80,8 @@ button.button__primary, button.button__secondary {
     padding-block: .6rem;
     font-weight: 600;
     /* TODO: fix width */
-    min-width: 193px; 
-    height: 58px;
+    min-width: 12rem; 
+    height: 3.625rem;
     letter-spacing: 1.5px;
 }
 
@@ -263,8 +263,8 @@ button.button__secondary:hover {
     .footer__cta > button {
         font-size: 1rem;
         line-height: 1rem;
-        width: clamp(193px, 14vw, 300px);
-        height: clamp(58px, 4vw, 100px);
+        width: clamp(12rem, 14vw, 19rem);
+        height: clamp(3.625rem, 4vw, 6.25rem);
         border-radius: 4rem;
     }
 }
@@ -315,14 +315,14 @@ button.button__secondary:hover {
     /* All buttons */
     .header__cta > button, .footer__cta > button  {
         font-size: clamp(.75rem, 2.5vw, 1rem);
-        height: clamp(40px, 8vw, 58px);
+        height: clamp(2.5rem, 8vw, 3.625rem);
         border-radius: 4rem;
     }
 
     /* Download buttons only */
     .header__cta > .button__primary, .footer__cta > button {
         min-width: unset;
-        width: clamp(140px, 25vw, 193px);
+        width: clamp(8.75rem, 25vw, 12rem);
     }
 }
 
