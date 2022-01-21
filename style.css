@@ -30,7 +30,7 @@ html, body, .container {
     gap: 1.5rem;
 }
 
-
+/* 
 .header__banner--a,
 .header__banner--b {
     width: 100%;
@@ -56,17 +56,17 @@ html, body, .container {
 
 .header__image--c {
     background-image: url(assets/desktop/image-hero-right.png);
-}
+} */
 
 .header__content {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 1.5vw, 3rem);
+    gap: 3vh;
 }
 
 .header__title {
     font-size: clamp(2.2rem, 3.2vw, 5rem);
-    line-height: clamp(2.2rem, 3.2vw, 5rem);
+    line-height: calc(clamp(2.2rem, 3.2vw, 5rem) + 5px);
     font-weight: 900;
     color: var(--header-font-color);
 }
@@ -77,7 +77,8 @@ html, body, .container {
 
 .header__cta {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5vw;
 }
 
 /***************  BUTTON ************** */
@@ -267,28 +268,39 @@ button.button__secondary:hover {
 
     .button__primary, .button__secondary {
         height: clamp(3.625rem, 4vw, 6.25rem);
-        font-size: clamp(1rem, 1.2vw, 1.6rem);
+        font-size: clamp(1rem, 1.5vw, 2rem);
         line-height: 1rem;
     }
 
+    /* Download button */
     .footer__cta > button, .header__cta > .button__primary {
         width: clamp(12rem, 14vw, 19rem);
     }
 
+    /* Smaller buttons  */
     .header__cta > .button__secondary {
-        width: clamp(10rem, 10vw, 15rem);
+        width: clamp(8rem, 10vw, 15rem);
     }
 
 }
 
 @media screen and (max-width: 768px) {
-    .header__image--b {
+    /* .header__image--b {
         display: block;
         background-image: url(assets/desktop/image-hero-right.png);
     }
 
     .header__image--c {
         display: none;
+    } */
+
+    .header__description {
+        padding-inline: 15vw;
+    }
+
+    .header__cta {
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     .main__flex-margin {
@@ -324,29 +336,42 @@ button.button__secondary:hover {
         font-size: clamp(.75rem, 2.5vw, 1rem)
     }
 
-    /* All buttons */
-    .header__cta > button, .footer__cta > button  {
-        font-size: clamp(.75rem, 2.5vw, 1rem);
-        height: clamp(2.5rem, 8vw, 3.625rem);
+    .button__primary, .button__secondary {
+        height: clamp(3rem, 4vw, 6.25rem);
+        font-size: clamp(.75rem, 2vw, 1rem);
+        line-height: 1rem;
+    }
+
+    .header__cta > .button__secondary {
+        width: clamp(7rem, 18vw, 10rem);
     }
 
     /* Download buttons only */
     .header__cta > .button__primary, .footer__cta > button {
-        width: clamp(8.75rem, 25vw, 12rem);
+        width: clamp(10rem, 25vw, 12rem);
     }
 }
 
 @media screen and (max-width: 425px) {
-    .header__image--a {
+    /* .header__image--a {
         background-image: url(assets/mobile/image-footer.jpg);
     }
     .header__image--b, .header__image--c {
         display: none;
+    } */
+
+    .header__description {
+        padding-inline: 15vw;
     }
 
     .header__cta {
         flex-direction: column;
-        gap: 1rem;
+        align-self: center;
+        gap: 3vh;
+    }
+
+    .header__cta > .button__secondary {
+        margin-inline: auto;
     }
 
     .main__image-container {
