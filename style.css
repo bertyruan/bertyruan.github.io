@@ -302,12 +302,31 @@ button.button__secondary:hover {
         margin: unset;
     }
 
+    .footer__title {
+        font-size: clamp(1.5rem, 7vw, 2.5rem);
+        line-height: clamp(1.5rem, 7vw, 2.5rem);
+    }
+
     .footer__description {
         width: 60vw;
+        font-size: clamp(.75rem, 2.5vw, 1rem)
+    }
+
+    /* All buttons */
+    .header__cta > button, .footer__cta > button  {
+        font-size: clamp(.75rem, 2.5vw, 1rem);
+        height: clamp(40px, 8vw, 58px);
+        border-radius: 4rem;
+    }
+
+    /* Download buttons only */
+    .header__cta > .button__primary, .footer__cta > button {
+        min-width: unset;
+        width: clamp(140px, 25vw, 193px);
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .header__image--a {
         background-image: url(assets/mobile/image-footer.jpg);
     }
@@ -342,21 +361,14 @@ button.button__secondary:hover {
         display: block;
     }
 
-    .footer__content {
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
     .footer__title {
-        font-size: 3.5rem;
-        line-height: 3.5rem;
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        line-height: clamp(2rem, 10vw, 3.5rem);
     }
 
     .footer__description {
         width: 60vw;
+        font-size: clamp(1rem, 5vw ,1.3rem)
     }
 
     .footer__cta > button {
