@@ -12,17 +12,10 @@ html, body, .container {
 .logo img {
     margin-inline: auto;
     margin-block: 3rem;
+    margin-top: 8vh;
 }
 
 /***************  HEADER ************** */
-
-.header {
-    /* display: flex;
-    flex-direction: row;
-    gap: 1rem;
-     */
-}
-
 
 /* mobile/tablet view --- start */
 
@@ -50,7 +43,7 @@ html, body, .container {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    gap: 3vh;
+    gap: 5vh;
     text-align: center;
 }
 
@@ -68,7 +61,6 @@ html, body, .container {
 .header__cta {
     display: flex;
     justify-content: center;
-    gap: 3rem;
 }
 
 /***************  BUTTON ************** */
@@ -237,6 +229,12 @@ button.button__secondary:hover {
 /***************  RESPONSIVE DESIGN ***************/
 
 @media screen and (min-width: 769px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 40vw 1fr;
+        grid-template-rows: 1fr;
+    }
+
     .header__image--full {
         display: none;
     }
@@ -246,7 +244,32 @@ button.button__secondary:hover {
         display: block;
     }
 
+    .header__image--left {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
     
+    .header__image--left > img {
+        margin-left: -8%;
+    }
+
+    .header__image--right {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .header__image--right > img {
+        margin-top: 13%;
+        margin-left: 8%;
+    }
+
+    .header__content {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        width: 40vw;
+        padding-inline: 2vw;
+        margin-top: 12vh;
+    }
 
     .footer__content {
         font-size: clamp(1rem, 1.5vw, 2rem);
@@ -275,12 +298,13 @@ button.button__secondary:hover {
 
     /* Download button */
     .footer__cta > button, .header__cta > .button__primary {
-        width: clamp(12rem, 14vw, 22rem);
+        width: clamp(10rem, 14vw, 22rem);
     }
 
     /* Smaller buttons  */
     .header__cta > .button__secondary {
         width: clamp(8rem, 10vw, 15rem);
+        margin-left: 2rem;
     }
 
 }
