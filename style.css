@@ -267,14 +267,14 @@ button.button__secondary:hover {
     }
 
     .button__primary, .button__secondary {
-        height: clamp(3.625rem, 4vw, 5.7rem);
+        height: clamp(3rem, 4vw, 5.7rem);
         font-size: clamp(1rem, 1.25vw, 2rem);
         line-height: 1rem;
     }
 
     /* Download button */
     .footer__cta > button, .header__cta > .button__primary {
-        width: clamp(12rem, 14vw, 19rem);
+        width: clamp(12rem, 14vw, 22rem);
     }
 
     /* Smaller buttons  */
@@ -295,7 +295,7 @@ button.button__secondary:hover {
     } */
 
     .header__description {
-        padding-inline: 15vw;
+        padding-inline: 22vw;
     }
 
     .header__cta {
