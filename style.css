@@ -17,51 +17,41 @@ html, body, .container {
 /***************  HEADER ************** */
 
 .header {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     gap: 1rem;
-    text-align: center;
+     */
 }
 
-.header__content {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+
+/* mobile/tablet view --- start */
+
+.header__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
-/* 
-.header__banner--a,
-.header__banner--b {
-    width: 100%;
+.header__image--full {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
 }
 
-.header__banner--b {
-    
-}
-
-.banner {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background-repeat: no-repeat;
-}
-
-.header__image--a {
-    background-image: url(assets/desktop/image-hero-left.png);
-}
-
-.header__image--b {
+.header__image--left,
+.header__image--right {
     display: none;
 }
 
-.header__image--c {
-    background-image: url(assets/desktop/image-hero-right.png);
-} */
+/* mobile/tablet view --- end */
 
 .header__content {
     display: flex;
     flex-direction: column;
+    width: 100vw;
     gap: 3vh;
+    text-align: center;
 }
 
 .header__title {
@@ -247,6 +237,17 @@ button.button__secondary:hover {
 /***************  RESPONSIVE DESIGN ***************/
 
 @media screen and (min-width: 769px) {
+    .header__image--full {
+        display: none;
+    }
+
+    .header__image--left,
+    .header__image--right {
+        display: block;
+    }
+
+    
+
     .footer__content {
         font-size: clamp(1rem, 1.5vw, 2rem);
         line-height: clamp(1rem, 1.5vw + 10px, 2rem);
@@ -353,13 +354,6 @@ button.button__secondary:hover {
 }
 
 @media screen and (max-width: 425px) {
-    /* .header__image--a {
-        background-image: url(assets/mobile/image-footer.jpg);
-    }
-    .header__image--b, .header__image--c {
-        display: none;
-    } */
-
     .header__description {
         padding-inline: 15vw;
     }
