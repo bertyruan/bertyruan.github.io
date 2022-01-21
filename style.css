@@ -78,7 +78,7 @@ html, body, .container {
 .header__cta {
     display: flex;
     justify-content: center;
-    gap: 5vw;
+    gap: 3rem;
 }
 
 /***************  BUTTON ************** */
@@ -267,8 +267,8 @@ button.button__secondary:hover {
     }
 
     .button__primary, .button__secondary {
-        height: clamp(3.625rem, 4vw, 6.25rem);
-        font-size: clamp(1rem, 1.5vw, 2rem);
+        height: clamp(3.625rem, 4vw, 5.7rem);
+        font-size: clamp(1rem, 1.25vw, 2rem);
         line-height: 1rem;
     }
 
