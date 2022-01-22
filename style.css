@@ -1,6 +1,7 @@
 html, body, .container {
     height: 100%;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -13,6 +14,7 @@ html, body, .container {
     margin-inline: auto;
     margin-block: 3rem;
     margin-top: 8vh;
+    height: 4vh;
 }
 
 /***************  HEADER ************** */
@@ -24,6 +26,7 @@ html, body, .container {
     grid-column: 1 / 2;
     margin-top: 2vh;
     margin-bottom: 10vh;
+    margin-inline: -3.5%;
 }
 
 .header__image--left,
@@ -303,6 +306,7 @@ button.button__secondary:hover {
 
     .footer__cta {
         flex: 1 1 30%;
+        overflow-x: visible;
     }
 
     .button__primary, .button__secondary {
@@ -311,17 +315,16 @@ button.button__secondary:hover {
         line-height: 1rem;
     }
 
+     /* Smaller buttons  */
+     .header__cta > .button__secondary {
+        min-width: clamp(8rem, 10vw, 15rem);
+        margin-left: 2vw;
+    }
+
     /* Download button */
     .footer__cta > button, .header__cta > .button__primary {
-        width: clamp(10rem, 14vw, 22rem);
-    }
-
-    /* Smaller buttons  */
-    .header__cta > .button__secondary {
-        width: clamp(8rem, 10vw, 15rem);
-        margin-left: 2rem;
-    }
-
+        min-width: clamp(10rem, 14vw, 22rem);
+    }  
 }
 
 @media screen and (max-width: 768px) {
@@ -364,6 +367,7 @@ button.button__secondary:hover {
         justify-content: space-evenly;
         text-align: center;
         margin: unset;
+        margin-top: 1vh;
     }
 
     .footer__title {
@@ -377,18 +381,19 @@ button.button__secondary:hover {
     }
 
     .button__primary, .button__secondary {
-        height: clamp(3rem, 4vw, 6.25rem);
-        font-size: clamp(.75rem, 2vw, 1rem);
+        height: 3rem;
+        font-size: clamp(.75rem, 2vw, .85rem);
         line-height: 1rem;
     }
 
+    /* Smaller button */
     .header__cta > .button__secondary {
-        width: clamp(7rem, 18vw, 10rem);
+        width: 7rem;
     }
 
     /* Download buttons only */
     .header__cta > .button__primary, .footer__cta > button {
-        width: clamp(10rem, 25vw, 12rem);
+        width: 11rem;
     }
 }
 
@@ -441,12 +446,6 @@ button.button__secondary:hover {
 
     .footer__description {
         width: 60vw;
-        font-size: clamp(1rem, 5vw ,1.3rem)
-    }
-
-    .footer__cta > button {
-        width: 50vw;
-        height: 15vw;
-        border-radius: 4rem;
+        font-size: clamp(.5rem, 5vw ,1.3rem)
     }
 }
