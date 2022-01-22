@@ -22,8 +22,6 @@ html, body, .container {
 /* mobile/tablet view --- start */
 
 .header__image--full {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
     margin-top: 2vh;
     margin-bottom: 10vh;
     margin-inline: -3.5%;
