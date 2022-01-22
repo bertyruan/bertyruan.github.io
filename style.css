@@ -328,15 +328,6 @@ button.button__secondary:hover {
 }
 
 @media screen and (max-width: 768px) {
-    /* .header__image--b {
-        display: block;
-        background-image: url(assets/desktop/image-hero-right.png);
-    }
-
-    .header__image--c {
-        display: none;
-    } */
-
     .header__description {
         padding-inline: 22vw;
     }
