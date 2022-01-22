@@ -1,0 +1,6 @@
+
+<svg viewBox="0 0 100 240" xmlns="http://www.w3.org/2000/svg">
+   <circle cx="50" cy="200" r="40" stroke="rgb(135, 135, 157)" stroke-width=".40" fill="white" />
+   <line x1="50" y1="0" x2="50" y2="160" style="stroke:rgb(135,135,157);stroke-width:.40" />
+   <text x="33" y="210" fill="#87879D" font-weight="bold" font-size="32px"> 02 </text>
+</svg> 

@@ -19,12 +19,6 @@ html, body, .container {
 
 /* mobile/tablet view --- start */
 
-.header__images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
 .header__image--full {
     grid-row: 1 / 3;
     grid-column: 1 / 2;
@@ -35,6 +29,12 @@ html, body, .container {
 .header__image--left,
 .header__image--right {
     display: none;
+    width: 100%;
+}
+
+.header__image--left > img,
+.header__image--right > img {
+    width: 100%;
 }
 
 /* mobile/tablet view --- end */
@@ -106,15 +106,34 @@ button.button__secondary:hover {
 
 /***************  SPACER ***************/
 
-
 .spacer {
-    margin-inline: auto;
-    margin-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.spacer__main {
+    margin-top: 12vh;
+    margin-bottom: 8vh;
+}
+
+.spacer__footer {
+    margin-top: 5vh;
+    z-index: 200;
+    /* Moves the spacer 4vh/24vh down. this is the ration of the spacer's svg */
+    margin-bottom: -4vh;
+}
+
+.spacer > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 .spacer > img {
-    height: 20vh;
+    margin-inline: auto;
+    height: 24vh;
 }
+
+
 
 /***************  MAIN ***************/
 
