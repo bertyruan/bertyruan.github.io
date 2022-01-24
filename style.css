@@ -93,7 +93,7 @@ button.button__secondary > .version-text {
     color: var(--secondary-color-2);
 }
 
-/***************  BUTTON HOVER ***************/
+/***************  BUTTON STATES ***************/
 
 button.button__primary:hover {
     background: #71C0D4;
@@ -103,6 +103,10 @@ button.button__secondary:hover {
     background: #B18BDD;
 }
 
+button:focus-visible {
+    outline: 0.4rem dashed var(--bg-color);
+    outline-offset: -.6rem;
+}
 
 
 /***************  SPACER ***************/
