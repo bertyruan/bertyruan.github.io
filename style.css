@@ -181,7 +181,7 @@ button:focus-visible {
 
 .main__title {
     font-size: clamp(2.2rem, 3vw, 4rem);
-    line-height: clamp(2.2rem, 3vw, 4rem);
+    line-height: 1;
     font-weight: 900;
     color: var(--header-font-color);
 }
@@ -298,7 +298,7 @@ button:focus-visible {
 
     .footer__title {
         font-size: clamp(1.75rem, 0.5692rem + 2.4567vw, 4.5rem);
-        line-height: clamp(1.75rem, 0.5692rem + 2.4567vw, 4.5rem);
+        line-height: 1;
         flex: 1 1 40%;
     }
 
@@ -365,7 +365,7 @@ button:focus-visible {
 
     .footer__title {
         font-size: clamp(1.5rem, 0.2544rem + 4.6784vw, 2.5rem);
-        line-height: clamp(1.5rem, 0.2544rem + 4.6784vw, 2.5rem);
+        line-height: 1;
     }
 
     .footer__description {
@@ -434,7 +434,7 @@ button:focus-visible {
 
     .footer__title {
         font-size: clamp(1.5rem, 0.6111rem + 7.1111vw, 2.5rem);
-        line-height: clamp(1.5rem, 0.6111rem + 7.1111vw, 2.5rem);
+        line-height: 1;
     }
 
     .footer__description {
