@@ -1,5 +1,4 @@
 html, body, .container {
-    height: 100%;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -14,7 +13,7 @@ html, body, .container {
     margin-inline: auto;
     margin-block: 3rem;
     margin-top: 8vh;
-    height: 4vh;
+    height: 3.5vh;
 }
 
 /***************  HEADER ************** */
@@ -48,9 +47,10 @@ html, body, .container {
 }
 
 .header__title {
+    font-weight: 900;
     font-size: clamp(2.2rem, 3.2vw, 5rem);
     line-height: calc(clamp(2.2rem, 3.2vw, 5rem) + 5px);
-    font-weight: 900;
+    
     color: var(--header-font-color);
 }
 
@@ -123,9 +123,12 @@ button:focus-visible {
 
 .spacer__footer {
     margin-top: 5vh;
-    z-index: 200;
     /* Moves the spacer 4vh/24vh down. this is the ration of the spacer's svg */
     margin-bottom: -4vh;
+}
+
+.spacer__footer > * {
+    z-index: 100;
 }
 
 .spacer > * {
@@ -174,7 +177,7 @@ button:focus-visible {
 }
 
 .main__subtitle {
-    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    font-size: clamp(1.2rem, 2vw - 8px, 2.5rem);
     font-weight: 900;
     color: var(--primary-color);
 }
